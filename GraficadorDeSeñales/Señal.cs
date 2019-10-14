@@ -180,10 +180,12 @@ namespace GraficadorDeSeñales
             int indice = 0;
             foreach (var muestra in señal1.Muestras)
             {
+                //Si f(x) <= g(x), entonces y(x) = f(x)
                 if(muestra.Y <= señal2.Muestras[indice].Y)
                 {
                     double nuevoValor = muestra.Y;
                 }
+                //Si f(x) > g(x), entonces y(x) = g(x)
                 else
                 {
                     double nuevoValor = señal2.Muestras[indice].Y;
